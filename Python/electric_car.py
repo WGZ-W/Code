@@ -1,5 +1,6 @@
 
 
+
 class Car:
     """simulator"""
 
@@ -30,3 +31,37 @@ class Car:
         """Increase"""
         self.odometer_reading += miles
 
+
+
+class Battery:
+    """simulator"""
+
+    def __init__(self, battery_size=40):
+        self.battery_size = battery_size
+
+    def describe_battery(self):
+        print(f"This car has a {self.battery_size}-kWh battery.")
+
+    def get_range(self):
+        ranges = 0
+        if self.battery_size == 40:
+            ranges = 150
+        elif self.battery_size == 65:
+            ranges = 225
+        print(f"This car can go about {ranges} miles on a full charge.")
+
+
+
+class ElectricCar(Car):
+    """Electric Car"""
+
+    def __init__(self, make, model, year):
+        super().__init__(make, model, year)
+        self.battery = Battery()
+
+
+
+my_leaf = ElectricCar('nissan', 'leaf', 2024)
+print(my_leaf.get_descriptive_name())
+my_leaf.battery.describe_battery()
+my_leaf.battery.get_range()
