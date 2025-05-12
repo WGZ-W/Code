@@ -23,14 +23,13 @@ ntu-ml-2025-spring-ta@googlegroups.com
 ### Download packages
 """
 
-!pip install datasets==3.3.2
+# !pip install datasets==3.3.2
 
 """### Import Packages"""
 
 import os
 import matplotlib.pyplot as plt
 import numpy as np
-import torch
 import torch.optim as optim
 from PIL import Image
 from torch import nn
@@ -42,7 +41,7 @@ from typing import Dict, Any, Optional
 
 """### Check Devices"""
 
-!nvidia-smi
+# !nvidia-smi
 
 """### Set Random Seed"""
 
