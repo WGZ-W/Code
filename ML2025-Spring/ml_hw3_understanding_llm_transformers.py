@@ -11,11 +11,11 @@ Original file is located at
 ## Check the status of your GPU
 """
 
-!nvidia-smi
+# !nvidia-smi
 
 """## Installing **transformers** for further usage (please do not alter the version for stable usage of model)"""
 
-!pip install transformers==4.47.0
+# !pip install transformers==4.47.0
 
 """## Huggingface login
 
